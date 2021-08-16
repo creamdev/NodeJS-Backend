@@ -10,9 +10,13 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    isAdmin:{
-        type:Boolean,
-        required:true
+    isVerified: {
+         type: Boolean,
+        default: false 
+    },
+    isAdmin: { 
+        type: Boolean,
+        default: false 
     },
     email:{
         type:String,
@@ -25,6 +29,12 @@ const UserSchema = mongoose.Schema({
     surname:{
         type:String,
         required:true
+    },
+    resetPasswordToken: {
+        type: String
+    },
+    resetPasswordExpires: {
+        type: Date
     }
 })
 

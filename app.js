@@ -35,7 +35,9 @@ mongoose.connect(
         useUnifiedTopology: true ,
         useNewUrlParser: true,
         useFindAndModify:false,
+        useCreateIndex: true,
         dbName:'copcu-database'
+        
     })
     .then(()=>{
         console.log('Database Connection is Ready...')
